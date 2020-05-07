@@ -20,7 +20,6 @@ class ListNode {
 }
 
 class mergeTwoLinkedLists {
-    //assuming l1 and l2 are never null or empty lists
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // l1 is also our accum list, l1 will always be the lesser head element so if not so swap them
         ListNode temp;
