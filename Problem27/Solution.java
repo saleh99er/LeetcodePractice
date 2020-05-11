@@ -1,15 +1,12 @@
-// My attempt at Problem 27: Remove Element Problem, faster than 100% of submissions but less memory than 5% of submissions
+// My attempt at Problem 27: Remove Element Problem, 0ms "faster than 100% of submissions" but less memory than 5% of submissions
 
 class Solution {
-    public static int indexOfLastValidEl(int elementsRemovedSoFar, int n){
-        return n-1-elementsRemovedSoFar;
-    }
 
     public static int removeElement(int[] nums, int val) {
         int elRemoved = 0;
         for(int i = nums.length-1; i >= 0; i--){
             if(nums[i] == val){ // swap with valid elements near end of the array 
-                int swapIndex = indexOfLastValidEl(elRemoved, nums.length);
+                int swapIndex = nums.length-1-elRemoved;
                 int temp = nums[swapIndex];
                 nums[swapIndex] = nums[i];
                 nums[i] = temp;
