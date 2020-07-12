@@ -50,7 +50,6 @@ class Solution {
             }
             else if(occurGotSoFar < occurNeeded){
                 result = WordOccurStatus.SEARCH_IN_PROGRESS;
-                return result;
             }
         }
         return result;
@@ -120,11 +119,14 @@ class Solution {
                 case OVERCOUNT_OCCURRED:
                     resetOccurrences(sOccurrences);
                     wordsIndex = closestSubstringIndex;
+                    sOccurrences.put(closestWord, 1);
+                    System.out.println("overcount occurred");
                     break;
                 case FOUND_ALL:
                     substringIndices.add(wordsIndex);
                     resetOccurrences(sOccurrences);
                     wordsIndex = closestSubstringIndex;
+                    System.out.println("found all");
                     break;
                 default:
                     break;
@@ -145,8 +147,8 @@ class Solution {
     }
 
     public static void main(String[] args){
-        String[] words = {"foo", "bar"};
-        String s = "barfoothefoobarman";
+        String[] words = {"bar", "foo", "the"};
+        String s = "barfoofoobarthefoobarman";
         
         System.out.println("----SOLN---------");
         List<Integer> soln = findSubstring(s, words);
