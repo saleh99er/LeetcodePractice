@@ -7,6 +7,10 @@
   for example, given n = 3, a solution set is 
   ['((()))', '()(())', '(())()', '(()())', '()()()']
 
+  Implemented a very inefficient soln,
+  runtime: 96ms, faster than 6.09% of submissions
+  memory usage: 23 MB, less than 5.03% of submissions
+  
 """
 
 from typing import List, Deque
