@@ -8,6 +8,22 @@ Memory Usage: 14.1 MB, less than 8.06%
 Runtime complexity: O(n^2)
 Space complexity: O(n)
 
+alt approach w/ DP (space and time of O(n^2)) ):
+S_x := character of string s at index x
+We define P(i,j) as following:
+
+P(i,j) = true iff substring S_i .. S_j is a palindrome, false OW
+
+Therefore,
+P(i, j) = P(i+1, j-1) and S_i == S_j
+
+The base cases are (for all i):
+P(i, i) = true
+P(i,i)=true
+
+Once all have been evaluated find the longest distance indices
+that evaluate to true in our memoization table. 
+
 """
 
 class Solution:
