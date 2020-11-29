@@ -1,7 +1,7 @@
 from math import ceil
 
 """
-  Problem 781: Rabbit in Forrest
+  Problem 781: Rabbit in Forrest (Medium)
 
   In a forest, each rabbit has some color. Some subset of rabbits (possibly all
   of them) tell you how many other rabbits have the same color as them. Those 
