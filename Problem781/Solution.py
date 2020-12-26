@@ -5,8 +5,8 @@ from math import ceil
 
   In a forest, each rabbit has some color. Some subset of rabbits (possibly all
   of them) tell you how many other rabbits have the same color as them. Those 
-  answers are placed in an array. Return the minimum number of rabbits that 
-  could be in the forest.
+  answers are placed in an array. ex. answers = [1, 1, 2]; soln = 4, Return the
+  minimum number of rabbits that could be in the forest.
   
   Approach: use a dictionary to map reported population by a bunny (key) to the
   amount of bunnies that reported this population so far. This way we can keep
