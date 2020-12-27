@@ -1,4 +1,15 @@
 """
+Given the root of a binary tree, each node has a value from 0 to 25 representing
+the letters 'a' to 'z': a value of 0 represents 'a', a value of 1 represents 
+'b', and so on.
+
+Find the lexicographically smallest string that starts at a leaf of this tree 
+and ends at the root.
+
+Approach: DFS search tree building the leaf to root string in reverse order and 
+compare it to the smallest lexicographical string soln so far, overwrite if 
+found is smaller (first one found overrides initial empty string)
+
 n := the number of characters/numbers present in the tree node
 n-1 = n/(n/n-1)
 
