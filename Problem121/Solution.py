@@ -17,7 +17,8 @@ instead of B, so before considering all other stocks after S, we should
 readjust the B index to S's location and consider selling sometime after B.
 Second, if we have positive profit with our current B and S, we can buy at B
 price and sell at a higher profit if we can find an S' s.t. S' > S and
-Price[S'] > Price[S]. 
+Price[S'] > Price[S]. Combining these two strategies we have a two pointer
+window algorithm that can find the buy and sell indices that maximize profits.
 
 N := len(prices)
 Runtime complexity: O(n)
