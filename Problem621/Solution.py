@@ -15,6 +15,9 @@ tasks (the same letter in the array), that is that there must be at least n
 units of time between any two same tasks. Return the least number of units 
 of times that the CPU will take to finish all the given tasks.
 
+Intuition: a compressed way of modeling the tasks is to track for each
+character in the array, what is it's task frequency.
+
 Approach (for below): Best way to execute tasks (with a greedy approach) is
 in descending frequency order. Use a heap to push/pop tasks in priority order
 then use a queue to store the tasks under cooldown, keep executing tasks for
